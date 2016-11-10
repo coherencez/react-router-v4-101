@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 
 // 1. import a few components
@@ -6,35 +6,14 @@ import { BrowserRouter, Match, Miss, Link } from 'react-router'
 import App from './App';
 import './index.css';
 
-class Home extends Component {
-  render() {
-    return (
-      <h1>Hello From The Home Page</h1>
-    )
-  }
-}
-class About extends Component {
-  render() {
-    return (
-      <h1>Hello From The About Page</h1>
-    )
-  }
-}
-class NotFound extends Component {
-  render() {
-    return (
-      <h1>Sorry not found!</h1>
-    )
-  }
-}
+const Home = () => (<h1>Hello From The Home Page</h1>)
+const About = () => (<h1>Hello From The About Page</h1>)
+const NotFound = () => (<h1>Sorry not found!</h1>)
 
-class Index extends Component {
-  render() {
-    return (
+const Index = () => (
       <BrowserRouter>
         <div>
           <ul>
-            {/* 6. Use the parent's matched pathname to link relatively */}
             <li><Link to={`/`}>Home</Link></li>
             <li><Link to={`/about`}>About</Link></li>
             <li><Link to={`/react`}>React</Link></li>
@@ -46,8 +25,6 @@ class Index extends Component {
         </div>
       </BrowserRouter>
     )
-  }
-}
 
 render(
   <Index />,
