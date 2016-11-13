@@ -26,7 +26,7 @@ class Home extends React.Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom} />
         </div>
-        <div style={{height: "90vh", width: 750, overflowY: "scroll", padding: 10 }}>
+        <div style={{height: "90vh", width: 750, overflowY: "scroll" }}>
           {this.props.places.map((place, i) =>
             <div className="col s12 m6" key={i}>
               <div className="card blue-grey darken-1 boxShadow">
