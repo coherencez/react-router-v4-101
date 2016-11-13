@@ -26,9 +26,9 @@ class Home extends React.Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom} />
         </div>
-        <div style={{height: "90vh", width: 750, overflowY: "scroll" }}>
+        <div style={{height: "90vh", width: 750, overflowY: "scroll", padding: 10 }}>
           {this.props.places.map((place, i) =>
-            <div className="col s12 m6" key={i} style={{marginTop: 0}}>
+            <div className="col s12 m6" key={i}>
               <div className="card blue-grey darken-1 boxShadow">
                 <div className="card-content white-text">
                   <span className="card-title">{place}</span>
@@ -38,6 +38,8 @@ class Home extends React.Component {
                 <div className="card-action">
                   <a href="#">This is a link</a>
                   <a href="#">This is a link</a>
+                  <a className="waves-effect waves-light btn"><i className="material-icons">phone</i></a>
+                  <a className="waves-effect waves-light btn" style={{background: 'red'}}><i className="material-icons">delete</i></a>
                 </div>
               </div>
             </div>
