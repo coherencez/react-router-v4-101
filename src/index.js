@@ -4,6 +4,7 @@ import GoogleMap from 'google-map-react'
 // 1. import a few components
 import { BrowserRouter, Match, Miss, Link } from 'react-router'
 import App from './App';
+// import AuthExample from './AuthExample';
 
 import 'jquery';
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
